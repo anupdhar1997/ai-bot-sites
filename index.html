@@ -3,46 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Landing Page</title>
+    <title>Music Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <h1 class="text-xl font-bold text-gray-900">Brand</h1>
+<body class="bg-gray-900 text-white">
+    <nav class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Music Hub</h1>
+            <div class="flex space-x-4">
+                <button class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded">Home</button>
+                <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded">Genres</button>
+                <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded">Artists</button>
+                <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded">Playlists</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">Featured Albums</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/seed/album1/400/400.jpg" alt="Album 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Album One</h3>
+                        <p class="text-gray-400 mb-2">Artist Name</p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Listen</button>
+                    </div>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-200 rounded-md">Home</a>
-                        <a href="#" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-200 rounded-md">About</a>
-                        <a href="#" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-200 rounded-md">Services</a>
-                        <a href="#" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-200 rounded-md">Contact</a>
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/seed/album2/400/400.jpg" alt="Album 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Album Two</h3>
+                        <p class="text-gray-400 mb-2">Artist Name</p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Listen</button>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/seed/album3/400/400.jpg" alt="Album 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Album Three</h3>
+                        <p class="text-gray-400 mb-2">Artist Name</p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Listen</button>
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </section>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <section class="text-center">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Welcome to Our Website</h2>
-            <p class="text-lg text-gray-600 mb-8">We provide amazing solutions for your business needs.</p>
-            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-200">Get Started</button>
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">Top Tracks</h2>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                <div class="p-4 border-b">
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold">Track</span>
+                        <span class="font-semibold">Artist</span>
+                        <span class="font-semibold">Duration</span>
+                    </div>
+                </div>
+                <div class="max-h-96 overflow-y-auto">
+                    <div class="p-4 border-b hover:bg-gray-700 cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <span>1. Song One</span>
+                            <span>Artist One</span>
+                            <span>3:45</span>
+                        </div>
+                    </div>
+                    <div class="p-4 border-b hover:bg-gray-700 cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <span>2. Song Two</span>
+                            <span>Artist Two</span>
+                            <span>4:12</span>
+                        </div>
+                    </div>
+                    <div class="p-4 border-b hover:bg-gray-700 cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <span>3. Song Three</span>
+                            <span>Artist Three</span>
+                            <span>3:28</span>
+                        </div>
+                    </div>
+                    <div class="p-4 border-b hover:bg-gray-700 cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <span>4. Song Four</span>
+                            <span>Artist Four</span>
+                            <span>5:01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">Latest Releases</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/seed/release1/800/400.jpg" alt="Release 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">New Release</h3>
+                        <p class="text-gray-400 mb-2">Artist Name</p>
+                        <p class="text-gray-400 mb-2">Released 2024</p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Listen Now</button>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://picsum.photos/seed/release2/800/400.jpg" alt="Release 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">New Release</h3>
+                        <p class="text-gray-400 mb-2">Artist Name</p>
+                        <p class="text-gray-400 mb-2">Released 2024</p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Listen Now</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-white mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; 2024 Brand. All rights reserved.</p>
-                <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="text-white hover:text-gray-300">Privacy</a>
-                    <a href="#" class="text-white hover:text-gray-300">Terms</a>
-                </div>
-            </div>
-        </div>
+    <footer class="bg-gray-800 text-center py-6">
+        <p>&copy; 2024 Music Hub. All rights reserved.</p>
     </footer>
 </body>
 </html>
