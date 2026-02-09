@@ -3,158 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GymPro - Fitness Center</title>
+    <title>Iron Forge Gym</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'hero-pattern': "url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22/><rect fill=%22%2314141f%22 width=%22100%22 height=%22100%22 x=%22100%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%22200%22/><rect fill=%22%2314141f%22 width=%22100%22 height=%22100%22 x=%22300%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%22400%22/><rect fill=%22%2314141f%22 width=%22100%22 height=%22100%22 x=%22500%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%22600%22/><rect fill=%22%2314141f%22 width=%22100%22 height=%22100%22 x=%22700%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%22800%22/><rect fill=%22%2314141f%22 width=%22100%22 height=%22100%22 x=%22900%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%221000%22/><rect fill=%22%2314141f%22 width=%22100%22 height=%22100%22 x=%221100%22/></svg>')",
+                        'dark-pattern': "url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22/><rect fill=%22%23454561%22 width=%22100%22 height=%22100%22 x=%22100%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%22200%22/><rect fill=%22%23454561%22 width=%22100%22 height=%22100%22 x=%22300%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%22400%22/><rect fill=%22%23454561%22 width=%22100%22 height=%22100%22 x=%22500%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%22600%22/><rect fill=%22%23454561%22 width=%22100%22 height=%22100%22 x=%22700%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%22800%22/><rect fill=%22%23454561%22 width=%22100%22 height=%22100%22 x=%22900%22/><rect fill=%22%23070617%22 width=%22100%22 height=%22100%22 x=%221000%22/><rect fill=%22%23454561%22 width=%22100%22 height=%22100%22 x=%221100%22/></svg>')",
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-gray-800/50 backdrop-blur-sm fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-green-600">GymPro</h1>
+                    <h1 class="text-2xl font-bold text-red-500">Iron Forge</h1>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-green-600">Home</a>
-                    <a href="#classes" class="text-gray-700 hover:text-green-600">Classes</a>
-                    <a href="#trainers" class="text-gray-700 hover:text-green-600">Trainers</a>
-                    <a href="#about" class="text-gray-700 hover:text-green-600">About</a>
-                    <a href="#contact" class="text-gray-700 hover:text-green-600">Contact</a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-red-600 transition-colors">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-red-600 transition-colors">About</a>
+                        <a href="#classes" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-red-600 transition-colors">Classes</a>
+                        <a href="#schedule" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-red-600 transition-colors">Schedule</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-red-600 transition-colors">Contact</a>
+                    </div>
                 </div>
-                <button class="md:hidden bg-green-600 text-white px-4 py-2 rounded-lg">Join Now</button>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="bg-gradient-to-r from-green-600 to-green-500 text-white py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6">Achieve Your Fitness Goals</h2>
-                <p class="text-xl mb-8">Join our community and transform your body with expert trainers and state-of-the-art equipment.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Get Started</button>
-                    <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition">Take a Tour</button>
+                <div class="md:hidden">
+                    <button type="button" class="bg-gray-800 p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="classes" class="py-16 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Fitness Classes</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Yoga & Pilates</h4>
-                        <p class="text-gray-600">Improve flexibility, strength, and mindfulness with our expert-led sessions.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Cardio Training</h4>
-                        <p class="text-gray-600">Boost your heart health and burn calories with our high-energy cardio workouts.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-4 0M11 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Strength Training</h4>
-                        <p class="text-gray-600">Build muscle and increase strength with our comprehensive weight training programs.</p>
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-hero-pattern min-h-screen flex items-center justify-center text-center py-20">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">Forge Your Strength</h2>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300">Where champions are made</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">Join Now</button>
+                <button class="bg-transparent border-2 border-red-500 hover:bg-red-500 hover:text-white text-white font-bold py-3 px-6 rounded-lg transition-colors">Take a Tour</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-12">About Iron Forge</h3>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h4 class="text-2xl font-bold mb-4">Your Path to Excellence</h4>
+                    <p class="text-gray-300 mb-4">Iron Forge Gym is more than just a fitness center—it's a community dedicated to helping you achieve your health and wellness goals. With state-of-the-art equipment, expert trainers, and a supportive environment, we provide everything you need to transform your body and mind.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm">24/7 Access</span>
+                        <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm">Free Weights</span>
+                        <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm">Cardio Zone</span>
+                        <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm">Personal Training</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="trainers" class="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Meet Our Trainers</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <div class="w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-3xl font-bold">JD</span>
-                        </div>
-                        <h4 class="text-xl font-semibold text-center text-gray-800 mb-2">John Doe</h4>
-                        <p class="text-center text-gray-600 mb-4">Certified Personal Trainer</p>
-                        <p class="text-gray-600">Specializing in strength training and body transformation with over 10 years of experience.</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <div class="w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-3xl font-bold">SJ</span>
-                        </div>
-                        <h4 class="text-xl font-semibold text-center text-gray-800 mb-2">Sarah Johnson</h4>
-                        <p class="text-center text-gray-600 mb-4">Yoga Instructor</p>
-                        <p class="text-gray-600">Expert in yoga and mindfulness, helping clients achieve balance and inner peace.</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <div class="w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-3xl font-bold">MB</span>
-                        </div>
-                        <h4 class="text-xl font-semibold text-center text-gray-800 mb-2">Mike Brown</h4>
-                        <p class="text-center text-gray-600 mb-4">Cardio Specialist</p>
-                        <p class="text-gray-600">Passionate about cardio training and helping clients improve their endurance and fitness levels.</p>
-                    </div>
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1534258936706-bd36d62002ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gym interior" class="w-full rounded-2xl shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="py-16 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-6">About GymPro</h3>
-                        <p class="text-gray-600 mb-4">Founded in 2010, GymPro has been dedicated to helping our community achieve their fitness goals. With state-of-the-art equipment, expert trainers, and a supportive environment, we provide everything you need to succeed.</p>
-                        <p class="text-gray-600 mb-4">Our mission is to create a welcoming space where everyone can work towards their health and wellness goals, regardless of their fitness level.</p>
-                        <div class="flex space-x-4">
-                            <span class="text-green-600 font-semibold">10+ Years Experience</span>
-                            <span class="text-green-600 font-semibold">500+ Members</span>
-                            <span class="text-green-600 font-semibold">24/7 Access</span>
-                        </div>
+    <!-- Classes Section -->
+    <section id="classes" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12">Fitness Classes</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-700 rounded-xl p-6 hover:shadow-2xl transition-shadow">
+                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-1.5 5A2 2 0 0017.733 23h-2.764a2 2 0 00-1.788-2.894l1.5-5A2 2 0 0013.477 9H4a2 2 0 00-2 2v5a2 2 0 002 2h5a2 2 0 011.5-0.268l1.5-5A2 2 0 0014 10zM11 15h8M7 4H4a2 2 0 00-2 2v5h12a2 2 0 002-2V7a2 2 0 00-2-2h-1"></path>
+                        </svg>
                     </div>
-                    <div class="bg-green-600 rounded-lg p-8 text-white">
-                        <h4 class="text-2xl font-bold mb-4">Join Today</h4>
-                        <p class="mb-6">Get started with a free trial and experience the GymPro difference.</p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Start Free Trial</button>
-                            <button class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition">View Plans</button>
-                        </div>
+                    <h4 class="text-xl font-bold mb-2">CrossFit</h4>
+                    <p class="text-gray-300 mb-4">High-intensity functional training that builds strength and endurance.</p>
+                    <span class="text-red-500 font-bold">Mon, Wed, Fri</span>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 hover:shadow-2xl transition-shadow">
+                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 4h8m4 0l1 1m-4-8h4m4 0l1 1m-4-8h4m-4 4h16M4 4h16c1 0 2 1.22 2 2.5S19 9 18 9H4C3 9 2 8.22 2 7V4c0-1.1.9-2 2-2z"></path>
+                        </svg>
                     </div>
+                    <h4 class="text-xl font-bold mb-2">Yoga</h4>
+                    <p class="text-gray-300 mb-4">Find balance and flexibility with our guided yoga sessions.</p>
+                    <span class="text-red-500 font-bold">Tue, Thu</span>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 hover:shadow-2xl transition-shadow">
+                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Spinning</h4>
+                    <p class="text-gray-300 mb-4">High-energy cycling classes that burn calories and boost cardio.</p>
+                    <span class="text-red-500 font-bold">Mon-Fri</span>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 hover:shadow-2xl transition-shadow">
+                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Boxing</h4>
+                    <p class="text-gray-300 mb-4">Learn boxing techniques while improving strength and coordination.</p>
+                    <span class="text-red-500 font-bold">Sat, Sun</span>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 hover:shadow-2xl transition-shadow">
+                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">HIIT</h4>
+                    <p class="text-gray-300 mb-4">High-intensity interval training for maximum fat burn.</p>
+                    <span class="text-red-500 font-bold">Mon-Fri</span>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 hover:shadow-2xl transition-shadow">
+                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Pilates</h4>
+                    <p class="text-gray-300 mb-4">Core strengthening and posture improvement exercises.</p>
+                    <span class="text-red-500 font-bold">Tue, Thu</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="bg-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
-                <p class="text-gray-300 mb-12">We're here to answer any questions and help you get started on your fitness journey.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2">Address</h4>
-                        <p>123 Fitness Ave<br>Health City, HC 12345</p>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2">Phone</h4>
-                        <p>(555) 123-4567</p>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-semibold mb-2">Email</h4>
-                        <p>info@gympro.com</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-900 text-white py-8 px-4 sm:px-6 lg:px-8">
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-20 px-4">
         <div class="max-w-7xl mx-auto">
-            <p class="text-center">&copy; 2024 GymPro. All rights reserved.</p>
+            <h3 class="text-3xl font-bold text-center mb-12">Weekly Schedule</h3>
+            <div class="bg-gray-800 rounded-2xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="bg-gray-700 p-6 w-full md:w-64">
+                        <h4 class="text-xl font-bold mb-6">Class Schedule</h4>
+                        <div class="space-y-3">
+                            <button class="w-full text-left py-3 px-4 rounded-lg font-medium transition-colors hover:bg-gray-600" data-day="monday">Monday</button>
+                            <button class="w-full text-left py-3 px-4 rounded-lg font-medium transition-colors hover:bg-gray-600" data-day="tuesday">Tuesday</button>
+                            <button class="w-full text-left py-3 px-4 rounded-lg font-medium transition-colors hover:bg-gray-600" data-day="wednesday">Wednesday</button>
+                            <button class="w-full text-left py-3 px-4 rounded-lg font-medium transition-colors hover:bg-gray-600" data-day="thursday">Thursday</button>
+                            <button class="w-full text-left py-3 px-4 rounded-lg font-medium transition-colors hover:bg-gray-600" data-day="friday">Friday</button>
+                            <button class="w-full text-left py-3 px-4 rounded-lg font-medium transition-colors hover:bg-gray-600" data-day="saturday">Saturday</button>
+                            <button class="w-full text-left py-3 px-4 rounded-lg font-medium transition-colors hover:bg-gray-600" data-day="sunday">Sunday</button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1">
+                        <div id="schedule-content">
+                            <div class="text-center text-gray-300">
+                                <p>Select a day to view classes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-center mb-12">Get in Touch</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-2xl font-bold mb-6">Visit Us</h4>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex">
+                            <svg class="w-5 h-5 mr-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>123 Fitness Ave, Workout City, ST 12345</span>
+                        </div>
+                        <div class="flex">
+                            <svg class="w-5 h-5 mr-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="flex">
+                            <svg class="w-5 h-5 mr-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>info@ironforgegym.com</span>
+                        </div>
+                        <div class="flex">
+                            <svg class="w-5 h-5 mr-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Open 24/7</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-6">Send us a Message</h4>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400">&copy; 2024 Iron Forge Gym. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Schedule functionality
+        document.querySelectorAll('[data-day]').forEach(button => {
+            button.addEventListener('click', function() {
+                const day = this.dataset.day;
+                const content = document.getElementById('schedule-content');
+                
+                const schedules = {
+                    monday: `
+                        <h4 class="text-xl font-bold mb-4">Monday Schedule</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">CrossFit</span>
+                                <span class="text-red-500">6:00 AM - 7:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Spinning</span>
+                                <span class="text-red-500">9:00 AM - 10:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">HIIT</span>
+                                <span class="text-red-500">5:00 PM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    `,
+                    tuesday: `
+                        <h4 class="text-xl font-bold mb-4">Tuesday Schedule</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Yoga</span>
+                                <span class="text-red-500">7:00 AM - 8:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Pilates</span>
+                                <span class="text-red-500">10:00 AM - 11:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">CrossFit</span>
+                                <span class="text-red-500">6:00 PM - 7:00 PM</span>
+                            </div>
+                        </div>
+                    `,
+                    wednesday: `
+                        <h4 class="text-xl font-bold mb-4">Wednesday Schedule</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Spinning</span>
+                                <span class="text-red-500">6:00 AM - 7:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">HIIT</span>
+                                <span class="text-red-500">12:00 PM - 1:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">CrossFit</span>
+                                <span class="text-red-500">5:00 PM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    `,
+                    thursday: `
+                        <h4 class="text-xl font-bold mb-4">Thursday Schedule</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Yoga</span>
+                                <span class="text-red-500">7:00 AM - 8:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Boxing</span>
+                                <span class="text-red-500">6:00 PM - 7:00 PM</span>
+                            </div>
+                        </div>
+                    `,
+                    friday: `
+                        <h4 class="text-xl font-bold mb-4">Friday Schedule</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">CrossFit</span>
+                                <span class="text-red-500">6:00 AM - 7:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Spinning</span>
+                                <span class="text-red-500">9:00 AM - 10:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">HIIT</span>
+                                <span class="text-red-500">5:00 PM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    `,
+                    saturday: `
+                        <h4 class="text-xl font-bold mb-4">Saturday Schedule</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Boxing</span>
+                                <span class="text-red-500">8:00 AM - 9:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Yoga</span>
+                                <span class="text-red-500">10:00 AM - 11:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">CrossFit</span>
+                                <span class="text-red-500">12:00 PM - 1:00 PM</span>
+                            </div>
+                        </div>
+                    `,
+                    sunday: `
+                        <h4 class="text-xl font-bold mb-4">Sunday Schedule</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Open Gym</span>
+                                <span class="text-red-500">8:00 AM - 12:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
+                                <span class="font-medium">Yoga</span>
+                                <span class="text-red-500">1:00 PM - 2:00 PM</span>
+                            </div>
+                        </div>
+                    `
+                };
+
+                content.innerHTML = schedules[day] || '<p>Select a day to view classes</p>';
+                
+                document.querySelectorAll('[data-day]').forEach(btn => {
+                    btn.classList.remove('bg-red-600', 'text-white');
+                });
+                this.classList.add('bg-red-600', 'text-white');
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
